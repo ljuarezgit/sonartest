@@ -36,5 +36,10 @@ public class UserDaoImplTest {
 			assertTrue(ex.getMessage()!=null);
 		}
 	}
+	@Test
+	public void testFindAll() {
+		List<User> users = userDao.findAll();
+		assertThat(users, notNullValue());
+	}
 	
 }
